@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
+const targetDate = new Date('2024-11-28T23:59:59');
+
 const CountdownTimer = () => {
-  const targetDate = new Date('2024-11-28T23:59:59');
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+    const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
 
   function calculateTimeLeft() {
     const difference = targetDate.getTime() - new Date().getTime();
@@ -21,6 +27,7 @@ const CountdownTimer = () => {
   }
 
   useEffect(() => {
+    // const timeleft = calculateTimeLeft()
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
