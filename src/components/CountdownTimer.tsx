@@ -2,7 +2,10 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const targetDate = new Date('2024-11-28T23:59:59');
-
+/* Fix for hydration mismatch error 
+  const currentTime = new Date().toLocaleTimeString();
+  return <div suppressHydrationWarning>The current time is: {currentTime}</div>;
+*/
 const CountdownTimer = () => {
     const [timeLeft, setTimeLeft] = useState({
     days: 0,
