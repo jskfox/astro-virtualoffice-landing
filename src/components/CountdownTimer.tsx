@@ -39,14 +39,14 @@ const CountdownTimer = () => {
     <div className="flex gap-4 justify-center">
       {timeBlocks.map((block, index) => (
         <motion.div
-          key={block.label}
+          key={`label-${block.label}`}
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: index * 0.1 }}
           className="flex flex-col items-center bg-white/30 backdrop-blur-sm rounded-lg p-3 min-w-[80px]"
         >
           <motion.span
-            key={block.value}
+            key={`val-${block.value}`}
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             className="text-3xl font-bold"
