@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const CountdownTimer = () => {
-  const targetDate = new Date('2024-11-30T23:59:59');
+  // const targetDate = new Date('2024-11-30T23:59:59');
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
-  function calculateTimeLeft() {
+  function calculateTimeLeft(targetDate: Date = new Date('2024-11-30T23:59:59')) {
     const difference = targetDate.getTime() - new Date().getTime();
     
     if (difference <= 0) {
