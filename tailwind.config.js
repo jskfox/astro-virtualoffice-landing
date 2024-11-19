@@ -6,6 +6,7 @@ export default {
       colors: {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
+        terceary: 'var(--terceary)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
