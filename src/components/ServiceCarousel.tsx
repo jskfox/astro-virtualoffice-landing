@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import localImg03 from '../assets/office-03.webp';
 import localImg05 from '../assets/office-05.webp';
+import localImg07 from '../assets/office-07.webp';
 import localImg08 from '../assets/office-08.webp';
-import localImg09 from '../assets/office-09.webp';
 
 const services = [
   {
@@ -24,7 +24,7 @@ const services = [
   {
     title: "Salas de Juntas y Capacitación",
     description: "Realiza tus reuniones de negocios, entrevistas, capacitaciones o presentaciones en una sala equipada, con servicio de recepción a tus invitados. Te proporcionamos todos los elementos necesarios para la celebración de tu junta",
-    image: localImg09,
+    image: localImg07,
     link: "/sala-de-juntas/"
   },
   {
