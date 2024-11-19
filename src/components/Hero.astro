@@ -1,13 +1,13 @@
 ---
+import imgBackground from '../assets/office-08.webp';
 import CountdownTimer from './CountdownTimer';
-
 ---
 
 <header 
   class="relative min-h-[80vh] flex items-center text-white py-20 overflow-hidden"
   style={{
     backgroundColor: '#e3463d',
-    backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80')",
+    backgroundImage: `url('${imgBackground.src}')`,
     backgroundBlendMode: 'multiply',
     backgroundSize: 'cover',
     backgroundPosition: 'center'
@@ -15,10 +15,10 @@ import CountdownTimer from './CountdownTimer';
 >
   <div class="container mx-auto px-4 relative z-10">
     <div class="text-center">
-      <h1 class="text-6xl font-bold mb-6 animate-fade-in">
+      <h1 class="text-4xl font-bold mb-6 animate-fade-in">
         Tu Oficina Virtual en Mexicali
       </h1>
-      <p class="text-3xl mb-8 animate-fade-in-delay">
+      <p class="text-6xl mb-8 animate-fade-in-delay">
         ¡Paga 5 meses y obtén el 6to GRATIS!
       </p>
       <div class="mb-8 animate-fade-in-delay-2">

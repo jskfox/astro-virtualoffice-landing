@@ -1,6 +1,8 @@
 ---
 import { Briefcase, Clock, Users } from 'lucide-react';
+import imgBackground from '../assets/office-10.webp';
 import LeadForm from './LeadForm';
+
 ---
 
 <section 
@@ -8,7 +10,7 @@ import LeadForm from './LeadForm';
   class="py-20 text-white relative"
   style={{
     backgroundColor: '#686868',
-    backgroundImage: "url('https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?auto=format&fit=crop&q=80')",
+    backgroundImage: `url('${imgBackground.src}')`,
     backgroundBlendMode: 'multiply',
     backgroundSize: 'cover',
     backgroundPosition: 'center'
