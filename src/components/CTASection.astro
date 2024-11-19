@@ -1,5 +1,5 @@
 ---
-import { Briefcase, Clock, Users } from 'lucide-react';
+import { Briefcase, Clock, PiggyBankIcon, Users } from 'lucide-react';
 import imgBackground from '../assets/office-10.webp';
 import LeadForm from './LeadForm';
 
@@ -38,6 +38,9 @@ import LeadForm from './LeadForm';
             <Briefcase className="w-6 h-6" />
             Servicios profesionales incluidos
           </li>
+          <li class="flex items-center gap-2 hover:translate-x-2 transition-transform">
+            <PiggyBankIcon className="w-6 h-6" />
+            Ahorra dinero con la promoción y paga mes a mes.
         </ul>
       </div>
       <LeadForm client:visible />
