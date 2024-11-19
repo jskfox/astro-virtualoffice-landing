@@ -1,0 +1,65 @@
+---
+import { Building2, Mail, Phone, Video, Calendar, MapPin } from 'lucide-react';
+
+const benefits = [
+  {
+    icon: Building2,
+    title: "Dirección Comercial Prestigiosa",
+    description: "Ubicación privilegiada en Mexicali para tu negocio",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
+  },
+  {
+    icon: Mail,
+    title: "Gestión de Correspondencia",
+    description: "Recepción y manejo profesional de tu correo",
+    image: "https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=80"
+  },
+  {
+    icon: Phone,
+    title: "Atención Telefónica",
+    description: "Recepcionista profesional para tus llamadas",
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80"
+  },
+  {
+    icon: Video,
+    title: "Salas de Juntas",
+    description: "Acceso a espacios profesionales para reuniones",
+    image: "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80"
+  },
+  {
+    icon: Calendar,
+    title: "Flexibilidad",
+    description: "Sin contratos largos ni inversiones grandes",
+    image: "https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=80"
+  },
+  {
+    icon: MapPin,
+    title: "Ubicación Céntrica",
+    description: "Fácil acceso en zona comercial de Mexicali",
+    image: "https://images.unsplash.com/photo-1622544804887-460e21b92ec0?auto=format&fit=crop&q=80"
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Ventajas de tu Oficina Virtual</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      {benefits.map((benefit) => (
+        <div class="group relative overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+          <div 
+            class="absolute inset-0 bg-cover bg-center z-0 transform group-hover:scale-110 transition-transform duration-500"
+            style={`background-image: url(${benefit.image})`}
+          />
+          <div class="relative bg-black/50 backdrop-blur-sm p-6 h-full z-10">
+            <div class="text-white mb-4">
+              <benefit.icon className="w-8 h-8 text-primary" />
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
+            <p class="text-white/90">{benefit.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

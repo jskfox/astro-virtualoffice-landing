@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #e3463d;
+  --secondary: #686868;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  display: none;
+}
+input {
+  
+  
+}

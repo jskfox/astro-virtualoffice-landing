@@ -1,0 +1,33 @@
+---
+import { MapPin } from 'lucide-react';
+---
+
+<footer class="bg-gray-900 text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">COBAK</h3>
+        <p class="mb-4">Centro de negocios y coworking en Mexicali</p>
+        <div class="flex items-center gap-2 mb-2">
+          <MapPin className="w-5 h-5" />
+          <span>Mexicali, Baja California</span>
+        </div>
+        <a
+          href="https://www.cobak.mx"
+          class="text-primary hover:text-primary/80 transition-colors"
+        >
+          www.cobak.mx
+        </a>
+      </div>
+      <div class="text-right">
+        <h4 class="text-xl font-semibold mb-4">Contáctanos</h4>
+        <a href="tel:+526864885707" class="block hover:text-primary transition-colors">
+          +52 (686) 488-5707
+        </a>
+        <a href="mailto:info@cobak.mx" class="block hover:text-primary transition-colors">
+          contacto@cobak.mx
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,44 @@
+---
+import { Briefcase, Clock, Users } from 'lucide-react';
+import LeadForm from './LeadForm';
+---
+
+<section 
+  id="lead-form"
+  class="py-20 text-white relative"
+  style={{
+    backgroundColor: '#686868',
+    backgroundImage: "url('https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?auto=format&fit=crop&q=80')",
+    backgroundBlendMode: 'multiply',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  }}
+>
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-bold mb-6">
+          ¡Aprovecha esta oferta exclusiva!
+        </h2>
+        <p class="text-xl mb-8">
+          Obtén un mes GRATIS al contratar 5 meses de Oficina Virtual
+        </p>
+        <ul class="space-y-4">
+          <li class="flex items-center gap-2 hover:translate-x-2 transition-transform">
+            <Clock className="w-6 h-6" />
+            Oferta por tiempo limitado
+          </li>
+          <li class="flex items-center gap-2 hover:translate-x-2 transition-transform">
+            <Users className="w-6 h-6" />
+            Soporte personalizado
+          </li>
+          <li class="flex items-center gap-2 hover:translate-x-2 transition-transform">
+            <Briefcase className="w-6 h-6" />
+            Servicios profesionales incluidos
+          </li>
+        </ul>
+      </div>
+      <LeadForm client:visible />
+    </div>
+  </div>
+</section>
