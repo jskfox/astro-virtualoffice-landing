@@ -1,21 +1,26 @@
 ---
 import Benefits from '../components/Benefits.astro';
+import ChatwootWidget from '../components/ChatwootWidget';
 import CTASection from '../components/CTASection.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
 import MessengerButton from '../components/MessengerButton';
 import Services from '../components/Services.astro';
 import WhatsAppButton from '../components/WhatsAppButton';
+import useIsMobile from "../hooks/useIsMobile";
 import Layout from '../layouts/Layout.astro';
+
 ---
 
 <Layout title="Oficina Virtual Mexicali | COBAK - Promoción Especial">
   <WhatsAppButton client:load />
   <MessengerButton client:load />
+  {
+    !useIsMobile && <ChatwootWidget client:load />
+  }  
   <Hero />
   <Benefits />
   <CTASection />
   <Services />
-  <Footer />
-  <!-- <Politicas /> -->
+  <Footer />  
 </Layout>
