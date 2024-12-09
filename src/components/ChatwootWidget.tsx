@@ -12,10 +12,10 @@ const ChatwootWidget: React.FC = () => {
       launcherTitle: "Chatea con nosotros"
     
     };
-
+    console.log(import.meta.env.PUBLIC_CHATWOOT_URL);
     
       (function (d: Document, t: string) {
-        const BASE_URL = "https://crm.digilap.net";
+        const BASE_URL = import.meta.env.PUBLIC_CHATWOOT_URL;
         const g = d.createElement(t) as HTMLScriptElement;
         const s = d.getElementsByTagName(t)[0];
         g.src = `${BASE_URL}/packs/js/sdk.js`;
@@ -25,7 +25,7 @@ const ChatwootWidget: React.FC = () => {
   
         g.onload = () => {
           (window as any).chatwootSDK.run({
-            websiteToken: "a1fuKH3WWYwCC88xpBDFeAf6",
+            websiteToken: import.meta.env.PUBLIC_CHATWOOT_TOKEN,
             baseUrl: BASE_URL,
           });
         };
