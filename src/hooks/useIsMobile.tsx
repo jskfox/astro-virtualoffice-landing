@@ -6,11 +6,13 @@ declare global {
 }
 
 function useIsMobile(): boolean {
-  const isMobile = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent || navigator.vendor || window.opera);
-  if (isMobile) {
-    return true;
-  }else
-  {return false}
+  if (typeof window !== 'undefined') {
+    const isMobile = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent || navigator.vendor || window.opera);
+    if (isMobile) {
+      return true;
+    }
+  }
+  return false;
   
 } 
 
