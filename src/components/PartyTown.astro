@@ -1,0 +1,10 @@
+---
+const { gTagId } = Astro.props;
+console.log('Algo' + gTagId);
+---
+<script type="text/partytown">   
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', gTagId);
+</script>
