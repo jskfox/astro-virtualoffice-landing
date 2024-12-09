@@ -4,5 +4,5 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   integrations: [tailwind(), react()],
-  site: 'https://virtual-landing.cobak.mx',
+  site: import.meta.env.SITE_URL,
 });

@@ -22,7 +22,8 @@ export default function LeadForm() {
     // Redirect to WhatsApp with form data
     const message = `¡Hola! Me interesa la promoción de oficinas virtuales.\n\nNombre: ${data.name}\nEmail: ${data.email}\nTeléfono: ${data.phone}`;
     const whatsappUrl = `https://wa.me/526864885707?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    const fullUrl = encodeURIComponent(whatsappUrl);
+    window.open('/confirmation?data=' + fullUrl, '_blank');
   };
 
   return (

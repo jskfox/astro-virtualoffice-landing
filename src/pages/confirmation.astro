@@ -1,0 +1,26 @@
+---
+// import Layout from "../layouts/Layout.astro";
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {        
+            console.log("Confirmation page");
+            // Get form data from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const fullUrl = urlParams.get('data');                  
+            if (fullUrl) {
+                window.open(fullUrl, "_self");
+            } else {
+                console.error('No valid URL found in parameters.');
+            }
+        }      
+    </script>    
+</head>
+<body>    
+</body>
+</html>
