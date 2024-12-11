@@ -1,0 +1,16 @@
+---
+const googleTag = import.meta.env.PUBLIC_GTAG;
+---
+
+<script
+  type="text/partytown"
+  src=`https://www.googletagmanager.com/gtag/js?id=${googleTag}`
+></script>
+<script type="text/partytown" define:vars={{googleTag}}>
+  window.dataLayer = window.dataLayer || [];  
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", googleTag);  
+</script>

@@ -12,8 +12,7 @@ const ChatwootWidget: React.FC = () => {
       launcherTitle: "Chatea con nosotros"
     
     };
-    console.log(import.meta.env.PUBLIC_CHATWOOT_URL);
-    
+        
       (function (d: Document, t: string) {
         const BASE_URL = import.meta.env.PUBLIC_CHATWOOT_URL;
         const g = d.createElement(t) as HTMLScriptElement;
