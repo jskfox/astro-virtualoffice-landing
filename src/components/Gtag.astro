@@ -6,11 +6,11 @@ const googleTag = import.meta.env.PUBLIC_GTAG;
   type="text/partytown"
   src=`https://www.googletagmanager.com/gtag/js?id=${googleTag}`
 ></script>
-<script type="text/partytown" define:vars={{googleTag}}>
-  window.dataLayer = window.dataLayer || [];  
+<script type="text/partytown" data-gid={googleTag}>  
+  window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);
   }
-  gtag("js", new Date());
-  gtag("config", googleTag);  
+  gtag("js", new Date());  
+  gtag("config", document.querySelector('[data-gid]').dataset.gid);
 </script>
